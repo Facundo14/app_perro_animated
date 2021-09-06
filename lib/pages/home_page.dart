@@ -5,11 +5,20 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        color: Colors.red,
-        child: Center(
-          child: RadialProgress(),
-        ),
+      body: Stack(
+        children: [
+          Container(
+            color: Colors.red,
+            child: Center(
+              child: RadialProgress(),
+            ),
+          ),
+          Positioned(
+            bottom: 90,
+            left: 35,
+            child: Text('WALK THE DOG', style: TextStyle(fontSize: 50, color: Colors.white, fontWeight: FontWeight.bold)),
+          )
+        ],
       ),
     );
   }
